@@ -1,69 +1,69 @@
-# KSU_BeerRatingDataset
+# Beer Rating Analysis and Prediction
 
-# Prediction of Cyclist Traffic Intensity (Prague)
+This project focuses on the analysis of a beer rating dataset and the exploration
+of relationships between beer characteristics and user ratings.
+The notebook demonstrates a complete data analysis workflow in Python,
+including data preprocessing, exploratory data analysis, and basic modeling.
 
-This project focuses on predicting the **hourly intensity of cyclist traffic**
-using open data from the **Golemio API (Prague)**.
-The goal is to demonstrate the full data science workflow:
-from data collection and preprocessing to feature engineering,
-model training, and evaluation.
-
-The project was created as part of a university course focused on machine learning
-and time series analysis.
+The project was created as part of a university coursework to demonstrate
+practical work with data in Python.
 
 ---
 
-## Data Source
+## Dataset
 
-- Open data provided by **Golemio API**
-- Bicycle counters and their hourly detection records
-- Data are aggregated into an **hourly time series** for a selected location
+- Beer rating dataset containing:
+  - numerical features describing beer properties
+  - user rating scores
+- The dataset is provided in a structured tabular format and loaded directly
+  into the Jupyter Notebook.
 
 ---
 
 ## Project Workflow
 
-The notebook follows a clear and reproducible pipeline:
+The notebook follows a clear and logical data analysis pipeline:
 
-1. **Data acquisition**
-   - Downloading bicycle counter metadata
-   - Fetching detection data via REST API with pagination
+1. **Data loading**
+   - Importing the dataset into a pandas DataFrame
+   - Initial inspection of the data structure
 
-2. **Data preprocessing**
-   - Conversion to time series format
-   - Handling missing timestamps
-   - Imputation of missing values
+2. **Data exploration**
+   - Overview of columns and data types
+   - Descriptive statistics
+   - Detection of missing values
 
-3. **Feature engineering**
-   - Time-based features (hour, day of week, weekend)
-   - Lag features
-   - Rolling statistics
+3. **Data preprocessing**
+   - Cleaning and filtering of data
+   - Handling missing or inconsistent values
+   - Preparation of features for further analysis
 
-4. **Modeling**
-   - Naive baseline model (lag-based)
-   - Linear Regression (baseline ML model)
-   - Gradient Boosting Regressor (non-linear model)
+4. **Exploratory Data Analysis (EDA)**
+   - Visualization of rating distributions
+   - Analysis of relationships between variables
+   - Identification of key factors influencing beer ratings
 
-5. **Evaluation**
-   - Comparison using MAE and RMSE
-   - Visual comparison of predicted vs. actual values
+5. **Modeling (if applicable)**
+   - Training simple predictive models
+   - Evaluation of model performance
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Python
-- pandas, numpy
-- scikit-learn
+- pandas
+- numpy
 - matplotlib
+- scikit-learn
 - Jupyter Notebook
 
 ---
 
-## 📈 Results
+## Results
 
-The models are evaluated and compared using error metrics and visualizations.
-The results show that more advanced models (Gradient Boosting)
-outperform naive and linear baselines, especially in capturing non-linear patterns
-in cyclist traffic behavior.
+The analysis provides insights into how different beer attributes
+relate to user ratings and highlights the most influential factors.
+If predictive models are used, their performance is evaluated
+using standard regression metrics.
 
